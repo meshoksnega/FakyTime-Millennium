@@ -1,0 +1,27 @@
+[plugin]
+id = "fakytime"
+name = "FakyTime"
+version = "1.0.1"
+author = "FakyTime"
+description = "Show custom (fake) playtime hours for games in your local Steam library. Purely cosmetic: nothing is sent to Steam."
+
+[backend]
+entry = "backend/main.lua"
+sources = ["backend/**/*.lua"]
+
+[frontend]
+entry = "frontend/index.tsx"
+
+[compiler]
+# auto = detect the Millennium installation and install the plugin there
+output_path = "auto"
+
+[dev]
+auto_restart = true
+reload_steamui_when = "both"
+
+[logger]
+padding = 0
+backend_prefix  = "BCK"
+frontend_prefix = "FRT"
+webview_prefix  = "WEB"
